@@ -1,0 +1,356 @@
+<html>
+
+<head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0
+        }
+
+        body {
+            background: white;
+            width: {{ width }}px;
+            height: {{ height }}px;
+            margin: auto;
+            position: absolute;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .left-to-right-1 {
+            background: white;
+            position: absolute;
+            height: auto;
+            width: 50%;
+        }
+
+        .left-to-right-2 {
+            background: white;
+            position: absolute;
+            height: auto;
+            width: 50%;
+            left: 50%;
+        }
+
+        .above-to-below-1 {
+            background: white;
+            position: absolute;
+            width: 100%;
+            height: 50%;
+        }
+
+        .above-to-below-2 {
+            background: white;
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            top: 50%;
+        }
+
+        .left-to-middle-and-right-1 {
+            background: white;
+            position: absolute;
+            width: 33%;
+            height: 100%;
+        }
+
+        .left-to-middle-and-right-2 {
+            background: white;
+            position: absolute;
+            width: 34%;
+            height: 100%;
+            left: 34%;
+        }
+
+        .left-to-middle-and-right-3 {
+            background: white;
+            position: absolute;
+            width: 33%;
+            height: 100%;
+            left: 66%;
+        }
+
+        .above-to-middle-and-below-1 {
+            background: white;
+            position: absolute;
+            width: 100%;
+            height: 33%;
+        }
+
+        .above-to-middle-and-below-2 {
+            background: white;
+            position: absolute;
+            width: 100%;
+            height: 34%;
+            top: 34%;
+        }
+
+        .above-to-middle-and-below-3 {
+            background: white;
+            position: absolute;
+            height: 33%;
+            width: 100%;
+            top: 66%;
+        }
+
+        .full-surround-1 {
+            background: white;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0
+        }
+
+        .full-surround-2 {
+            background: white;
+            position: absolute;
+            height: 50%;
+            top: 25%;
+            width: 50%;
+            left: 25%;
+            z-index: 1
+        }
+
+        .surround-from-above-1 {
+            background: white;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0
+        }
+
+        .surround-from-above-2 {
+            background: white;
+            position: absolute;
+            height: 75%;
+            top: 25%;
+            width: 50%;
+            left: 25%;
+            z-index: 1
+        }
+
+        .surround-from-below-1 {
+            background: white;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0
+        }
+
+        .surround-from-below-2 {
+            background: white;
+            position: absolute;
+            height: 75%;
+            bottom: 25%;
+            width: 50%;
+            left: 25%;
+            z-index: 1
+        }
+
+        .surround-from-left-1 {
+            background: white;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0
+        }
+
+        .surround-from-left-2 {
+            background: white;
+            position: absolute;
+            height: 50%;
+            bottom: 25%;
+            width: 75%;
+            left: 25%;
+            z-index: 1
+        }
+
+        .surround-from-upper-left-1 {
+            background: white;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0
+        }
+
+        .surround-from-upper-left-2 {
+            background: white;
+            position: absolute;
+            height: 75%;
+            width: 75%;
+            top: 25%;
+            left: 25%;
+            z-index: 1
+        }
+
+        .surround-from-upper-right-1 {
+            background: white;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0
+        }
+
+        .surround-from-upper-right-2 {
+            background: white;
+            position: absolute;
+            height: 75%;
+            width: 75%;
+            top: 25%;
+            right: 25%;
+            z-index: 1
+        }
+
+        .surround-from-lower-left-1 {
+            background: white;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0
+        }
+
+        .surround-from-lower-left-2 {
+            background: white;
+            position: absolute;
+            height: 75%;
+            width: 75%;
+            bottom: 25%;
+            left: 25%;
+            z-index: 1
+        }
+
+        .overlaid-1 {
+            background: white;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0
+        }
+
+        .overlaid-2 {
+            background: white;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            z-index: 1
+        }
+
+        .chuan-1 {
+            background: white;
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            z-index: 0
+        }
+        
+        .chuan-2 {
+            background: white;
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            left: 50%;
+            z-index: 0
+        }
+        
+        .chuan-3 {
+            background: white;
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            left: 50%;
+            top: 50%;
+            z-index: 0
+        }
+
+        .xin-1 {
+            background: white;
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            z-index: 0
+        }
+        
+        .xin-2 {
+            background: white;
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            top: 50%;
+            z-index: 0
+        }
+        
+        .xin-3 {
+            background: white;
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            left: 50%;
+            z-index: 0
+        }
+        .bang-1 {
+            background: white;
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            z-index: 0
+        }
+        
+        .bang-2 {
+            background: white;
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            left: 50%;
+            z-index: 0
+        }
+        
+        .bang-3 {
+            background: white;
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            top: 50%;
+            z-index: 0
+        }
+        .wu-1 {
+            background: white;
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            z-index: 0
+        }
+        
+        .wu-2 {
+            background: white;
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            top: 50%;
+            z-index: 0
+        }
+        
+        .wu-3 {
+            background: white;
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            top: 50%;
+            left: 50%;
+            z-index: 0
+        }
+    </style>
+</head>
+
+<body>
+
+
+    {{ body }}
+
+</body>
+
+</html>
