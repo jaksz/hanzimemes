@@ -1,4 +1,4 @@
-# Hanzi memes
+# Hanzi memes - memorize Chinese characters through GIFs
 
 [Live demo](https://hanzimemes.herokuapp.com) (might take half a minute to load for the first time, since it's hosted on a free dyno on Heroku)
 
